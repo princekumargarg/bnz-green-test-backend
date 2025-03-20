@@ -63,6 +63,10 @@ const generateRecommendations = async (footprint, transport) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("<h1>🌱 Welcome to the <span style='color: green;'>Carbon Footprint Backend</span> 🚀</h1>");
+});
+
 // API Endpoint: Calculate Carbon Footprint
 app.post("/calculate", async (req, res) => {
   const { distance, transport } = req.body;
